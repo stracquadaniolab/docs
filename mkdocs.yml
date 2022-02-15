@@ -1,0 +1,9 @@
+site_name: Stracquadanio Lab Documentation
+theme:
+    name: readthedocs
+    highlightjs: true
+    hljs_languages:
+        - yaml
+        - python
+        - r
+        - bash
