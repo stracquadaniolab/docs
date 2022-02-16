@@ -1,6 +1,6 @@
 site_name: Lab Documentation
 nav: 
-    - Home: 'index.md'
+    - 'Home': 'index.md'
     - 'Project Lifecycle':
           - 'Project management': './projects-lifecycle/project-management.md'
           - 'Project workflow': './projects-lifecycle/project-workflow.md'
@@ -8,6 +8,11 @@ nav:
     - 'Systems setup':
           - 'Mac workstations': './systems-setup/workstation-mac.md'
           - 'Cell HPC': './systems-setup/hpc-cell.md'
+          - 'GitHub' : './systems-setup/github.md'
+            
+    - 'Programming':
+          - 'Coding standards': './programming/coding-standards.md'
+          - 'Docker': './programming/docker.md'
 
 theme:
     name: readthedocs
@@ -22,3 +27,4 @@ theme:
         - bash
 markdown_extensions:
   - tables
+
