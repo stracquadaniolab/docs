@@ -1,9 +1,24 @@
-site_name: Stracquadanio Lab Documentation
+site_name: Lab Documentation
+nav: 
+    - Home: 'index.md'
+    - 'Project Lifecycle':
+          - 'Project management': './projects-lifecycle/project-management.md'
+          - 'Project workflow': './projects-lifecycle/project-workflow.md'
+          - 'Project workspace': './projects-lifecycle/project-workspace.md'
+    - 'Systems setup':
+          - 'Mac workstations': './systems-setup/workstation-mac.md'
+          - 'Cell HPC': './systems-setup/hpc-cell.md'
+
 theme:
     name: readthedocs
+    # palette:
+    #     primary: blue grey
+
     highlightjs: true
     hljs_languages:
         - yaml
         - python
         - r
         - bash
+markdown_extensions:
+  - tables

@@ -1,4 +1,4 @@
-# Welcome to the Stracquadanio Lab documentation
+# Laboratory documentation
 
 ## Project management resources
 

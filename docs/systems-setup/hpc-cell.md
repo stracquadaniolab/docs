@@ -1,54 +1,85 @@
-# Cell cluster
+# Cell HPC
 
-Cell is the lab internal cluster, which should be used for high priority jobs,
-or jobs requiring resources hard to schedule on EDDIE.
+Cell is the lab High Performance Computing (HPC) system, which should be used
+for high priority jobs, or jobs requiring resources hard to schedule on the
+EDDIE university system.
 
-## Access
+## Available resources
+
+### Hardware resources
+
+- 128 CPU cores, 2.4Ghz-3.1GHz
+- 64 or 128 Gb ECC RAM per node
+- 24Tb storage
+- 1 Nvidia TitanX 16GB GPU
+
+### Software resources
+
+- Nvidia GPU drivers 
+- Docker
+- Singularity
+- Slurm
+
+## Obtaining access
+
+Access to Cell is a granted by informing the Dr Stracquadanio and filling a
+ticket with the [IS Helpline](https://edin.ac/launch-edhelp), specifying 
+that you will need to be added to the `lab` group.
+
+## Login
+
+Cell is available only through SSH within the University of Edinburgh network, 
+including UoE VPN, UoE Eduroam, and office ethernet outlets.
+
+To access the login node, use SSH as follows:
 
 ```
 ssh UUN@cell.bio.ed.ac.uk
 ```
 
 where UUN is your university UUN and the password is the one used for MyED and
-other university services.
+the other University services.
+
+## Filesystems
+
+| Directory                       | Description                                     | Size  | Backup |
+| --------------------------------| ------------------------------------------------|-------|--------|
+| `/localdisk/storage/home/<UUN>` | Home directory to store conda or basic tools    | 50Gb  |   No   |
+| `/localdisk/storage/projects`   | Directory to store teams' projects              | 10Tb  |   Yes  |
+| `/localdisk/storage/datasets`   | Directory to store raw data                     | 5Tb   |   Yes  |
 
 
-## Filesystem
+**WARNING** Although the projects are regularly backed up, Cell is not intended
+for long term storage. Therefore, it's mandatory to transfer your raw data and
+final results on the group Datastore regularly.
 
-- `/export/homes/home/UUN`: 20Gb space. Home directory to use for storing conda
-  and basic tools.
-- `/export/projects/lab`: up to 7Tb. This is the location where lab members must
-  create their workspace directories.
-- `/export/projects/collaborators`: up to 7Tb. This is the location where
-  collaborators, visitors and UG students must create their workspace
-  directories.
 
-IMPORTANT! Although the projects are stored on RAID1, the cluster is not backed
-up. Thus, it's mandatory to transfer your results on the group datastore once
-your jobs are done. Datastore is accessible from the nodes using sftp. More info
-on Datastore. 
+## Account setup
 
-## Setup miniconda 
+### Install miniconda 
 
-Download the installer and install it on your home directory. 
+You should use `miniconda` to install any software you might need, since it
+allows user-level installations of most common Unix software. If you cannot find
+your software in the default channel, please check also the `conda-forge` and
+`bioconda` channels.
 
+To install `miniconda`, download the installer in your home directory as
+follows:
 ```
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 ``` 
 
-Run the installer 
-
+Then, run the installer as follows: 
 ```
 bash Miniconda3-latest-Linux-x86_64.sh
 ``` 
-and answer 'yes' to each question including the default location. Then, activate
-the installation by running
-
+and answer 'yes' to each question including the default location. Finally,
+activate your installation by running:
 ```
 source ~/.bashrc
 ```
 
-## Install nextflow
+### Install nextflow
 
 You can install Nextflow from the command line by running: 
 
@@ -57,7 +88,7 @@ curl -s https://get.nextflow.io | bash
 ```
 
 
-## FAQs:
+## FAQ
 
 - **I tried to pull a docker image, but it gives me an auth error**: 1) you
   should have a PAT (personal access token) added so that you can access github
