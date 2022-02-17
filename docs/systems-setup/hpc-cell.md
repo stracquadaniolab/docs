@@ -91,6 +91,32 @@ You can install Nextflow from the command line by running:
 curl -s https://get.nextflow.io | bash
 ```
 
+#### Add your GitHub PAT
+
+You need to add your PAT to the Nextflow configuration to pull from the lab
+GitHub organization. To do that, create a new text file as follows: 
+
+```bash
+nano ~/.nextflow/scm
+```
+
+and write the following configuration parameters, replacing the `user` and 
+`password` information with the your credentials.
+
+```bash
+providers {
+
+    github {
+        user = 'your-user-name'
+        password = 'your-personal-access-token;'
+    }
+
+}
+```
+
+Finally, press `Ctrl+o` to write your configuration to file.
+
+
 ### Install cookiecutter 
 
 You can install `cookiecutter` by running the following command: 
