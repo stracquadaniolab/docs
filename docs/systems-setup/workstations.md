@@ -1,4 +1,4 @@
-# Mac Workstation
+# Workstations
 
 The lab uses Mac workstations running Mac OS X, which come pre-configured to
 University standards by IT systems. We established a setup procedure to

@@ -65,17 +65,21 @@ your software in the default channel, please check also the `conda-forge` and
 
 To install `miniconda`, download the installer in your home directory as
 follows:
+
 ```
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 ``` 
 
 Then, run the installer as follows: 
+
 ```
 bash Miniconda3-latest-Linux-x86_64.sh
 ``` 
+
 and answer 'yes' to each question including the default location. Finally,
 activate your installation by running:
-```
+
+```bash
 source ~/.bashrc
 ```
 
@@ -83,8 +87,16 @@ source ~/.bashrc
 
 You can install Nextflow from the command line by running: 
 
-```
+```bash
 curl -s https://get.nextflow.io | bash
+```
+
+### Install cookiecutter 
+
+You can install `cookiecutter` by running the following command: 
+
+```bash
+conda install -c conda-forge cookiecutter
 ```
 
 
