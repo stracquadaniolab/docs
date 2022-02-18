@@ -105,17 +105,58 @@ and write the following configuration parameters, replacing the `user` and
 
 ```bash
 providers {
-
     github {
         user = 'your-user-name'
         password = 'your-personal-access-token;'
     }
-
 }
 ```
 
 Finally, press `Ctrl+o` to write your configuration to file.
 
+To pull Docker images from GitHub, you also have to configure the credentials 
+for `singularity` as environment variables. To do that, create a new config 
+file as follows: 
+
+```bash
+nano ~/.nextflow/config
+```
+
+and write the following parameters, replacing the `SINGULARITY_DOCKER_PASSWORD`
+and with the your PAT.
+
+```bash
+env {
+        SINGULARITY_DOCKER_LOGIN='$oauthtoken'
+        SINGULARITY_DOCKER_PASSWORD='your-personal-access-token;'
+}
+```
+
+Finally, press `Ctrl+o` to write your configuration to file.
+
+### Test your installation 
+
+You can test your installation by creating a `test-workflow` in 
+your home directory as follows:  
+
+```bash
+mkdir ~/test-workflow && cd ~/test-workflow
+```
+
+Now pull the `boot-nf` workflow as follows: 
+
+```bash
+nextflow pull stracquadaniolab/boot-nf
+```
+
+and run it on Cell as follows: 
+
+```bash
+nextflow run stracquadaniolab/boot-nf -profile singularity,slurm,test
+```
+
+which will create a file `results/results.txt` containing your ip address and
+location in JSON format.
 
 ### Install cookiecutter 
 
