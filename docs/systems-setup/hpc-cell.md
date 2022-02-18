@@ -81,6 +81,14 @@ activate your installation by running:
 source ~/.bashrc
 ```
 
+###  Install cookiecutter
+
+You can install `cookiecutter` by running the following command:
+
+```bash
+conda install -c conda-forge cookiecutter
+```
+
 ### Install nextflow
 
 You can install Nextflow from the command line by running:
@@ -156,13 +164,6 @@ nextflow run stracquadaniolab/boot-nf -profile singularity,slurm,test
 which will create a file `results/results.txt` containing your ip address and
 location in JSON format.
 
-###  Install cookiecutter
-
-You can install `cookiecutter` by running the following command:
-
-```bash
-conda install -c conda-forge cookiecutter
-```
 
 ## FAQ
 
