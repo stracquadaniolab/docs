@@ -2,9 +2,9 @@ site_name: Lab Documentation
 nav: 
     - 'Home': 'index.md'
     - 'Systems setup':
+          - 'GitHub' : './systems-setup/github.md'      
           - 'Workstations': './systems-setup/workstation.md'
           - 'Cell HPC': './systems-setup/hpc-cell.md'
-          - 'GitHub' : './systems-setup/github.md'
     
     - 'Project Lifecycle':
           - 'Project management': './projects-lifecycle/project-management.md'
