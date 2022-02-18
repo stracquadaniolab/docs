@@ -125,8 +125,8 @@ and with the your PAT.
 
 ```bash
 env {
-        SINGULARITY_DOCKER_LOGIN='$oauthtoken'
-        SINGULARITY_DOCKER_PASSWORD='your-personal-access-token;'
+  SINGULARITY_DOCKER_LOGIN='$oauthtoken'
+  SINGULARITY_DOCKER_PASSWORD='your-personal-access-token;'
 }
 ```
 
