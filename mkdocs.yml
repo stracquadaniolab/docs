@@ -1,4 +1,4 @@
-site_name: Lab Documentation
+site_name: Stracquadanio Lab Documentation
 nav:
         - "Home": "index.md"
         - "Systems setup":
@@ -13,7 +13,7 @@ nav:
 
         - "Programming":
                   - "Coding standards": "./programming/coding-standards.md"
-                  - "Docker": "./programming/docker.md"
+                #   - "Docker": "./programming/docker.md"
 theme:
         name: readthedocs
         # palette:
