@@ -1,4 +1,4 @@
-# Project workflow 
+# Project workflows
 
 We use a standardized workflow structure based on Nextflow, which simplify
 developing methods and run experiments across different environments.
@@ -9,7 +9,7 @@ developing methods and run experiments across different environments.
 cookiecutter https://github.com/stracquadaniolab/cookiecutter-workflow-nf.git
 ```
 
-The system will ask you a few questions and create the structure for you.
+The system will ask you a few questions and then create the structure for you.
 Successively, create a repo in GitHub with the name of the directory just
 created.
 

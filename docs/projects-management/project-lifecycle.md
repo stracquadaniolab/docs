@@ -1,4 +1,4 @@
-# Project management
+# Project lifecycle
 
 We have defined a project lifecycle to make our experiments reproducible.
 

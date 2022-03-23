@@ -1,4 +1,15 @@
-# Project workspace
+# Project workspaces
+
+We use a standardized directory structure, called workspace, where we run and
+store all our experiments for a given project.
+
+## Create a workspace
+
+```bash
+cookiecutter https://github.com/stracquadaniolab/cookiecutter-workspace-nf.git
+```
+
+The system will ask you a few questions and then create the structure for you.
 
 
 ## Directory structure
