@@ -5,12 +5,12 @@
 
 ```
 .
-|-- conf
-|-- data
-|-- logs
-|-- readme.md
-|-- resources
-`-- results
+├── conf
+├── data
+├── logs
+├── resources
+├── results
+└── readme.md
 ```
 
 The `conf` directory contains Nextflow config files to run a pipeline; you must
@@ -19,7 +19,7 @@ them on the command line.
 
 The `data` directory contains data to be processed by a pipeline. This directory
 usually contains the raw data (e.g. data from sequencing experiments). You
-should take some time to organise it in a meaningful and consistent way.
+should take some time to organize it in a meaningful and consistent way.
 
 The `resources` directory contains data retrieved from external
 sources/repositories, like annotation files (e.g. genome GFF) or geneset GMT
@@ -28,10 +28,11 @@ files.
 The `logs` directory contains the log of each pipeline run.
 
 The `results` directory contains the result of experiments. You should take some
-time to organise it in a meaningful and consistent way.
+time to organize it in a meaningful and consistent way. It is strongly
+recommended to results in a directory named like `2022-01-01-my-first-test`.
 
 The `readme.md` file contains a description of the project and how the `data`
-and `results` folder are organised.  
+and `results` folder are organized.  
 
 ## Naming guidelines
 

@@ -1,6 +1,6 @@
 # GitHub
 
-Source code of all projects, cookiecutters, and docker images are stored in
+The source code of all projects, cookiecutters, and Docker images are stored in
 GitHub, under the _stracquadaniolab_ organization. 
 
 ## Account setup 
