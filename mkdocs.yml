@@ -5,6 +5,7 @@ nav:
                   - "GitHub": "./systems-setup/github.md"
                   - "Workstations": "./systems-setup/workstation.md"
                   - "Cell HPC": "./systems-setup/hpc-cell.md"
+                  - "Reference manager": "./systems-setup/reference-manager.md"  
 
         - "Project Management":
                   - "Project lifecycle": "./projects-management/project-lifecycle.md"
