@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Cell HPC - Stracquadanio Lab Documentation</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Cell HPC";
+        var mkdocs_page_input_path = "systems-setup/hpc-cell.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/python.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/r.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/bash.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Stracquadanio Lab Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Systems setup</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../github/">GitHub</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../workstation/">Workstations</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Cell HPC</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#available-resources">Available resources</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#hardware-resources">Hardware resources</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#software-resources">Software resources</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#obtaining-access">Obtaining access</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#login">Login</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#filesystems">Filesystems</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#account-setup">Account setup</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#install-miniconda">Install miniconda</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#install-cookiecutter">Install cookiecutter</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#install-nextflow">Install nextflow</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#add-your-github-pat">Add your GitHub PAT</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#test-your-installation">Test your installation</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#faq">FAQ</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../reference-manager/">Reference manager</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Project Management</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../projects-management/project-lifecycle/">Project lifecycle</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../projects-management/project-workflow/">Project workflows</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../projects-management/project-workspace/">Project workspaces</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Programming</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../programming/coding-standards/">Coding standards</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Stracquadanio Lab Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Systems setup &raquo;</li>
+      <li>Cell HPC</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="cell-hpc">Cell HPC</h1>
+<p>Cell is the lab High Performance Computing (HPC) system, which should be used
+for high priority jobs, or jobs requiring resources hard to schedule on the
+EDDIE university system.</p>
+<h2 id="available-resources">Available resources</h2>
+<h3 id="hardware-resources">Hardware resources</h3>
+<ul>
+<li>128 CPU cores, 2.4Ghz-3.1GHz</li>
+<li>64 or 128 Gb ECC RAM per node</li>
+<li>24Tb storage</li>
+<li>1 Nvidia TitanX 16GB GPU</li>
+</ul>
+<h3 id="software-resources">Software resources</h3>
+<ul>
+<li>Nvidia GPU drivers</li>
+<li>Docker</li>
+<li>Singularity</li>
+<li>Slurm</li>
+</ul>
+<h2 id="obtaining-access">Obtaining access</h2>
+<p>Access to Cell is a granted by informing the Dr Stracquadanio and filling a
+ticket with the <a href="https://edin.ac/launch-edhelp">IS Helpline</a>, specifying
+that you will need to be added to the <code>lab</code> group.</p>
+<h2 id="login">Login</h2>
+<p>Cell is available only through SSH within the University of Edinburgh network,
+including UoE VPN, UoE Eduroam, and office ethernet outlets.</p>
+<p>To access the login node, use SSH as follows:</p>
+<pre class="highlight"><code>ssh UUN@cell.bio.ed.ac.uk</code></pre>
+<p>where UUN is your university UUN and the password is the one used for MyED and
+the other University services.</p>
+<h2 id="filesystems">Filesystems</h2>
+<table>
+<thead>
+<tr>
+<th>Directory</th>
+<th>Description</th>
+<th>Size</th>
+<th>Backup</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/localdisk/storage/home/&lt;UUN&gt;</code></td>
+<td>Home directory to store conda or basic tools</td>
+<td>50Gb</td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>/localdisk/storage/projects</code></td>
+<td>Directory to store teams' projects</td>
+<td>10Tb</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>/localdisk/storage/datasets</code></td>
+<td>Directory to store raw data</td>
+<td>5Tb</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<p><strong>WARNING</strong> Although the projects are regularly backed up, Cell is not intended
+for long term storage. Therefore, it's mandatory to transfer your raw data and
+final results on the group Datastore regularly.</p>
+<h2 id="account-setup">Account setup</h2>
+<h3 id="install-miniconda">Install miniconda</h3>
+<p>You should use <code>miniconda</code> to install any software you might need, since it
+allows user-level installations of most common Unix software. If you cannot find
+your software in the default channel, please check also the <code>conda-forge</code> and
+<code>bioconda</code> channels.</p>
+<p>To install <code>miniconda</code>, download the installer in your home directory as
+follows:</p>
+<pre class="highlight"><code>wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh</code></pre>
+<p>Then, run the installer as follows:</p>
+<pre class="highlight"><code>bash Miniconda3-latest-Linux-x86_64.sh</code></pre>
+<p>and answer 'yes' to each question including the default location. Finally,
+activate your installation by running:</p>
+<pre class="highlight"><code class="language-bash">source ~/.bashrc</code></pre>
+<h3 id="install-cookiecutter">Install cookiecutter</h3>
+<p>You can install <code>cookiecutter</code> by running the following command:</p>
+<pre class="highlight"><code class="language-bash">conda install -c conda-forge cookiecutter</code></pre>
+<h3 id="install-nextflow">Install nextflow</h3>
+<p>You can install Nextflow from the command line by running:</p>
+<pre class="highlight"><code class="language-bash">curl -s https://get.nextflow.io | bash</code></pre>
+<h4 id="add-your-github-pat">Add your GitHub PAT</h4>
+<p>You need to add your PAT to the Nextflow configuration to pull from the lab
+GitHub organization. To do that, create a new text file as follows:</p>
+<pre class="highlight"><code class="language-bash">nano ~/.nextflow/scm</code></pre>
+<p>and write the following configuration parameters, replacing the <code>user</code> and
+<code>password</code> information with the your credentials.</p>
+<pre class="highlight"><code class="language-bash">providers {
+    github {
+        user = 'your-user-name'
+        password = 'your-personal-access-token;'
+    }
+}</code></pre>
+<p>Finally, press <code>Ctrl+o</code> to write your configuration to file.</p>
+<p>To pull Docker images from GitHub, you also have to configure the credentials
+for <code>singularity</code> as environment variables. To do that, create a new config
+file as follows:</p>
+<pre class="highlight"><code class="language-bash">nano ~/.nextflow/config</code></pre>
+<p>and write the following parameters, replacing the <code>SINGULARITY_DOCKER_PASSWORD</code>
+and with the your PAT.</p>
+<pre class="highlight"><code class="language-bash">env {
+  SINGULARITY_DOCKER_LOGIN='$oauthtoken'
+  SINGULARITY_DOCKER_PASSWORD='your-personal-access-token;'
+}</code></pre>
+<p>Finally, press <code>Ctrl+o</code> to write your configuration to file.</p>
+<h4 id="test-your-installation">Test your installation</h4>
+<p>You can test your installation by creating a <code>test-workflow</code> in
+your home directory as follows:  </p>
+<pre class="highlight"><code class="language-bash">mkdir ~/test-workflow &amp;&amp; cd ~/test-workflow</code></pre>
+<p>Now pull the <code>boot-nf</code> workflow as follows:</p>
+<pre class="highlight"><code class="language-bash">nextflow pull stracquadaniolab/boot-nf</code></pre>
+<p>and run it on Cell as follows:</p>
+<pre class="highlight"><code class="language-bash">nextflow run stracquadaniolab/boot-nf -profile singularity,slurm,test</code></pre>
+<p>which will create a file <code>results/results.txt</code> containing your ip address and
+location in JSON format.</p>
+<h2 id="faq">FAQ</h2>
+<ul>
+<li>
+<p><strong>I tried to pull a docker image, but it gives me an auth error</strong>: 1) you
+  should have a PAT (personal access token) added so that you can access github
+  images <a href="https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token">github
+  help</a>.
+  2) you should be added to the docker group by an admin, contact the IS
+  helpline to have your used enable 3) your docker image should be built and
+  pushed to the gh repository (check the github action for the workflow). These
+  three steps should solve 95% of problems.</p>
+</li>
+<li>
+<p><strong>Pipeline suddenly fails with 137 error</strong>: 1) Most likely you haven't
+  allocated enough memory for your job. Check <a href="https://www.nextflow.io/docs/latest/config.html#">Nextflow configuration
+  file</a> for details
+  (particularly <em>executor</em> scope: memory setting).</p>
+</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../workstation/" class="btn btn-neutral float-left" title="Workstations"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../reference-manager/" class="btn btn-neutral float-right" title="Reference manager">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../workstation/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../reference-manager/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

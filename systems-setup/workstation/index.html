@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Workstations - Stracquadanio Lab Documentation</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Workstations";
+        var mkdocs_page_input_path = "systems-setup/workstation.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/python.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/r.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/bash.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Stracquadanio Lab Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Systems setup</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../github/">GitHub</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Workstations</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#update-mac-os-x">Update Mac OS X</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#install-developer-tools">Install Developer Tools</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#install-visual-studio-code">Install Visual Studio Code</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#install-docker">Install Docker</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#install-nextflow">Install Nextflow</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#install-miniconda">Install miniconda</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#install-pipx">Install Pipx</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#install-cookiecutter">Install cookiecutter</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#install-bump2version">Install bump2version</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../hpc-cell/">Cell HPC</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../reference-manager/">Reference manager</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Project Management</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../projects-management/project-lifecycle/">Project lifecycle</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../projects-management/project-workflow/">Project workflows</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../projects-management/project-workspace/">Project workspaces</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Programming</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../programming/coding-standards/">Coding standards</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Stracquadanio Lab Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Systems setup &raquo;</li>
+      <li>Workstations</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="workstations">Workstations</h1>
+<p>The lab uses Mac workstations running Mac OS X, which come pre-configured to
+University standards by IT systems. We established a setup procedure to
+standardise the work environment in the lab and streamline know-how sharing.</p>
+<p>Upon receiving your machine, you should go through the setup procedure before
+working on your projects.</p>
+<h2 id="update-mac-os-x">Update Mac OS X</h2>
+<p>Make sure that you are running latest Mac OS X version before installing any
+tool. To do that, go to: <code>System Preferences &gt; Software Update</code>. The system will
+automatically check the presence of new updates and, if so, download and install
+them by pressing the <code>Update Now</code> button.</p>
+<h2 id="install-developer-tools">Install Developer Tools</h2>
+<p>Developers Tools is a package including the basic tools for development on Mac
+OS X, including <code>gcc</code>, <code>python</code> and <code>git</code>.
+To install <code>Developer Tools</code>, open a <code>Terminal</code> and run the following command:</p>
+<pre class="highlight"><code class="language-bash">xcode-select --install</code></pre>
+<p>press the <code>Install</code> button and agree to the license terms.</p>
+<h2 id="install-visual-studio-code">Install Visual Studio Code</h2>
+<p>Visual Studio Code (VSC) is a powerful open-source IDE, which provides excellent
+tools for code development, including autocomplete, online debug, and Latex live
+compilation.</p>
+<p>To install <code>VSC</code>, download the installer from:
+<a href="https://code.visualstudio.com">https://code.visualstudio.com</a>.  Move the
+application from the <code>Downloads</code> folder to the Applications folder, which you
+can find in the <code>Finder</code>.</p>
+<p>Recommended plugins to install:</p>
+<ul>
+<li>Better comments</li>
+<li>Code spell checker</li>
+<li>Docker</li>
+<li>Git Graph</li>
+<li>EditorConfig for VSCode</li>
+<li>Git History</li>
+<li>Latex workshop</li>
+<li>Nextflow</li>
+<li>Remote containers</li>
+<li>Remote - SSH</li>
+<li>Rewrap</li>
+<li>Todo Tree</li>
+</ul>
+<h2 id="install-docker">Install Docker</h2>
+<p>The lab uses Docker containers as the underpinning execution system for the projects.
+You can install the latest release from <a href="https://www.docker.com">https://www.docker.com</a>.</p>
+<h2 id="install-nextflow">Install Nextflow</h2>
+<p>Nextflow is the default workflow orchestration system. You can install Nextflow
+from the command line by running:</p>
+<pre class="highlight"><code class="language-bash">curl -s https://get.nextflow.io | bash</code></pre>
+<h2 id="install-miniconda">Install miniconda</h2>
+<p>You should use <code>miniconda</code> to install any software you might need, since it
+allows user-level installations of most common Unix software. If you cannot find
+your software in the default channel, please check also the <code>conda-forge</code> and
+<code>bioconda</code> channels.</p>
+<p>To install <code>miniconda</code>, download the installer in your home directory as
+follows:</p>
+<pre class="highlight"><code class="language-bash">wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh</code></pre>
+<p>Then, run the installer as follows:</p>
+<pre class="highlight"><code class="language-bash">bash Miniconda3-latest-Linux-x86_64.sh</code></pre>
+<p>and answer 'yes' to each question including the default location. Finally,
+activate your installation by running:</p>
+<pre class="highlight"><code class="language-bash">source ~/.bashrc</code></pre>
+<h2 id="install-pipx">Install Pipx</h2>
+<p>Many tools we use are written in Python and, depending on how your system and
+projects are configured, they might create unwanted problems, which can be
+easily avoided by using <code>Pipx</code>.</p>
+<p>To install <code>Pipx</code>, open a <code>Terminal</code> and run the following command:</p>
+<pre class="highlight"><code class="language-bash">python3 -m pip install --user pipx
+python3 -m pipx ensurepath</code></pre>
+<h2 id="install-cookiecutter">Install cookiecutter</h2>
+<p><code>cookiecutter</code> is a command-line utility that creates folder structures from
+a template. We use cookiecutters to bootstrap all our projects.</p>
+<p>To install <code>cookiecutter</code>, open a <code>Terminal</code> and run the following command:</p>
+<pre class="highlight"><code class="language-bash">pipx install cookiecutter</code></pre>
+<h2 id="install-bump2version">Install bump2version</h2>
+<p>We manage semantic versioning using bump2version, which can be installed by
+opening a <code>Terminal</code> and run the following command:</p>
+<pre class="highlight"><code class="language-bash">pipx install bump2version</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../github/" class="btn btn-neutral float-left" title="GitHub"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../hpc-cell/" class="btn btn-neutral float-right" title="Cell HPC">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../github/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../hpc-cell/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

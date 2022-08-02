@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Project workflows - Stracquadanio Lab Documentation</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Project workflows";
+        var mkdocs_page_input_path = "projects-management/project-workflow.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/python.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/r.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/bash.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Stracquadanio Lab Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Systems setup</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../systems-setup/github/">GitHub</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../systems-setup/workstation/">Workstations</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../systems-setup/hpc-cell/">Cell HPC</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../systems-setup/reference-manager/">Reference manager</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Project Management</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../project-lifecycle/">Project lifecycle</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Project workflows</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#create-a-new-workflow-structure">Create a new workflow structure</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#directory-structure">Directory structure</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#the-workflow-file">The workflow file</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#custom-scripts-management">Custom scripts management</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#software-management">Software management</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#testing">Testing</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#versioning">Versioning</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#push-your-code-to-github">Push your code to GitHub</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#continuous-integration">Continuous integration</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#documentation">Documentation</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../project-workspace/">Project workspaces</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Programming</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../programming/coding-standards/">Coding standards</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Stracquadanio Lab Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Project Management &raquo;</li>
+      <li>Project workflows</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="project-workflows">Project workflows</h1>
+<p>We use a standardized workflow structure based on Nextflow, which simplify
+developing methods and run experiments across different environments.</p>
+<h2 id="create-a-new-workflow-structure">Create a new workflow structure</h2>
+<pre class="highlight"><code class="language-bash">cookiecutter https://github.com/stracquadaniolab/cookiecutter-workflow-nf.git</code></pre>
+<p>The system will ask you a few questions and then create the structure for you.
+Successively, create a repo in GitHub with the name of the directory just
+created.</p>
+<h2 id="directory-structure">Directory structure</h2>
+<pre class="highlight"><code class="language-bash">├── .github
+│  └── workflows
+│     └── ci.yml
+├── bin
+│  ├── fit.py
+│  └── plots.py
+├── conf
+│  └── base.config
+├── containers
+│  ├── Dockerfile
+│  └── environment.yml
+├── testdata
+│  └── mydata.txt
+├── .bumpversion.cfg
+├── .devcontainer.json
+├── .gitignore
+├── main.nf
+├── nextflow.config
+└── readme.md</code></pre>
+<h2 id="the-workflow-file">The workflow file</h2>
+<p>The <code>main.nf</code> file contains the entrypoint for the workflow, and it uses
+Nextflow DSL2 by default. The workflow parameters are stored in the
+<code>nextflow.config</code> file, which in turn include other files in the <code>conf</code>
+directory; usually, you only have to define the parameters of your specific
+pipeline, since the <code>conf/base.conf</code> file includes profiles to run your workflow
+in different computing environment, e.g. Slurm, GitHub. </p>
+<p>Please, refer to the <a href="https://www.nextflow.io/docs/latest/index.html">Nextflow
+documentation</a> for an overview
+of the framework.</p>
+<h2 id="custom-scripts-management">Custom scripts management</h2>
+<p>Custom code (aka your scripts and classes) needed by the pipeline should be
+added to the <code>bin</code> directory; the code in this directory is automatically added
+to <code>$PATH</code> when running the pipeline, which makes custom scripts easily portable
+and accessible. If you are using Python, you should have a file for each class
+of operations, e.g. a file <code>plots.py</code> for all the plots, and use
+<a href="https://github.com/docopt/docopt"><code>docopt</code></a> to have standard Unix command line
+interface. See the auto-generated pipeline for an example.</p>
+<h2 id="software-management">Software management</h2>
+<p>Third-party software is managed by <code>micromamba</code> and specified in a
+<code>environment.yml</code> file; keep the <code>yml</code> file updated and specify the version of
+each software you are using in order to ensure reproducibility.</p>
+<p>To ensure reproducibility and running experiments on local machines and HPC
+clusters, it is strongly recommended to build a Docker image. The bundled
+<code>Dockerfile</code> can be used to build an image with the software specified in your
+<code>environment.yml</code> file. To do that, run:</p>
+<pre class="highlight"><code class="language-bash">docker build . -t ghcr.io/stracquadaniolab/&lt;my-workflow&gt;:&lt;version&gt; -f containers/Dockerfile</code></pre>
+<p>where <code>&lt;my-workflow&gt;</code> is the name of your workflow and <code>&lt;version&gt;</code>
+is the current version of your workflow, starting from <code>0.0.0</code>.</p>
+<p>The template comes with an auto-generated <code>.devcontainer.json</code> file, which
+allows developing your scripts inside a container with all the software
+specified in <code>environment.yml</code> using <code>vscode</code>.</p>
+<p>Sometimes you would want to pull a docker image from GitHub container registry:
+<pre class="highlight"><code class="language-bash">docker pull ghcr.io/stracquadaniolab/&lt;workflow_name&gt;:&lt;version&gt;</code></pre>
+In order to successfully pull an image, first you need to authenticate yourself
+with your personal access token, see here: <a href="https://docs.github.com/en/packages/guides/migrating-to-github-container-registry-for-docker-images#authenticating-with-the-container-registryhttps://docs.github.com/en/packages/guides/migrating-to-github-container-registry-for-docker-images#authenticating-with-the-container-registry">Authenticating with the container
+registry</a></p>
+<h2 id="testing">Testing</h2>
+<p>It is important to build workflows that can be automatically tested; thus, you
+will have to add small test data into the <code>testdata</code> directory, and modify the
+<code>test</code> profile in <code>conf/base.config</code> configuration file to specify any parameter
+needed for your workflow to run. See the auto-generated pipeline for an example.</p>
+<h2 id="versioning">Versioning</h2>
+<p>All projects must follow a semantic version scheme. The format adopted is
+<code>MAJOR.MINOR.PATCH</code>:</p>
+<ul>
+<li>MAJOR: drastic changes that make disruptive changes with a previous release. </li>
+<li>MINOR: add functions to the workflow but keeps everything compatible within
+  the MAJOR version.</li>
+<li>PATCH: bug fixes or settings update.</li>
+</ul>
+<p>To update the version of your workflow, you should run the following command from 
+the command line: </p>
+<pre class="highlight"><code class="language-bash">bump2version major #for major release
+bump2version minor #for minor release
+bump2version patch #for patch release</code></pre>
+<h2 id="push-your-code-to-github">Push your code to GitHub</h2>
+<p>As the project is version controlled using Git, you can push your code to GitHub
+as follows:</p>
+<pre class="highlight"><code class="language-bash">git add . 
+git commit -am "new: added super cool feature"
+git push -u origin master</code></pre>
+<p>Importantly, after a <code>bumpversion</code>, you also have to push the tag just created as follows:</p>
+<pre class="highlight"><code class="language-bash">git push --tags</code></pre>
+<h2 id="continuous-integration">Continuous integration</h2>
+<p>Each pipeline comes with a pre-configured GitHub workflow to automatically test
+the code and build a Docker image; the workflow is stored in
+<code>.github/workflows/ci.yml</code>. Please note that a Docker image is only released
+when you push a tag.</p>
+<h2 id="documentation">Documentation</h2>
+<p>Each workflow must have an updated <code>readme.md</code> file, describing:</p>
+<ul>
+<li>what the workflow does</li>
+<li>how to configure the workflow</li>
+<li>how to run the workflow</li>
+<li>a description of the output generated</li>
+</ul>
+<p>A <code>readme.md</code> file with the required sections is automatically generated by this
+cookiecutter.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../project-lifecycle/" class="btn btn-neutral float-left" title="Project lifecycle"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../project-workspace/" class="btn btn-neutral float-right" title="Project workspaces">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../project-lifecycle/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../project-workspace/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
